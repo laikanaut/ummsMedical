@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="medli">
+    <head>
+        <meta charset="utf-8" >
+        
+        <title>UMMS Medical Training</title>
+        
+        <!--Imports-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                     
+        <!--Local Dependencies-->
+        <script src="resources/js/app.js"></script>
+        
+        <!--Resource files-->
+        <script src="resources/directives/searchbar/searchbar.js"></script>
+        
+        
+        <!--Styling-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="resources/css/bootstrap-overrides.css">
+        <link rel="stylesheet" href="resources/css/styles.css">
+    
+        
+        <!--Directive Styling-->
+        <link rel="stylesheet" href="resources/directives/searchbar/searchbar.css">
+        
+    </head>
+    <body ng-controller="mainController as mainCtrl">
+    
+        <div class="container content-body">
+            <div id="header" class="page-title container-fluid">
+                <h1>UMMS Medical Training</h1>
+                
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#" aria-controls="home" role="tab" data-toggle="tab" ng-click="mainCtrl.showHome()"><i class="glyphicon glyphicon-home"></i> <span class="hidden-sm hidden-xs">Home</span></a></li>
+                    <li role="presentation"><a href="#" aria-controls="lesson progress" role="tab" data-toggle="tab" ng-click="mainCtrl.showProgress()"><i class="glyphicon glyphicon-signal"></i> <span class="hidden-sm hidden-xs">My Progress</span></a></li>
+                    <li role="presentation"><a href="#" aria-controls="dictionary" role="tab" data-toggle="tab" ng-click="mainCtrl.showDictionary()"><i class="glyphicon glyphicon-book"></i> <span class="hidden-sm hidden-xs">Dictionary</span></a></li>
+                </ul>
+            </div>
+            <div id="content-region" class="container-fluid">
+                <!--Home-->
+                
+                <div class="container-fluid" ng-if="mainCtrl.homeDisplayed" ng-include="'resources/pages/home.html'" ></div>
+                
+                <!--Progress / Stats-->
+                <div class="container-fluid" ng-if="mainCtrl.progressDisplayed" ng-include="'resources/pages/progress.html'" ></div>
+                
+                <!--Dictionary-->
+                <div class="container-fluid" ng-if="mainCtrl.dictionaryDisplayed" ng-include="'resources/pages/dictionary.html'" ></div>
+            </div>
+            
+        </div>
+    </body>
+</html>

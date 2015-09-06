@@ -1,0 +1,47 @@
+.searchBarContainer{
+    
+    position: relative;
+    
+    max-width:400px;
+    min-width:215px;
+    
+    height:34px;
+    
+    border-style:solid;
+    border-width:1px;
+    border-color:#ababab;
+    border-radius: 4px;
+        
+    
+    
+}
+
+.searchBarContainer input[type='text']{
+    
+    margin:0;
+    
+    border:none;
+    outline:none;
+    
+    width:90%;
+}
+
+.searchBarContainer input[type='text']:focus{
+    box-shadow: none;
+}
+
+.searchBarContainer i{
+    
+    position: absolute;
+    
+    
+    right: 4px;
+    top:9px;
+    bottom:0;
+    
+    cursor:pointer;
+        
+    
+}
+
+
