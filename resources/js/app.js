@@ -33,6 +33,11 @@
             
             
             
+            vm.keyUpCheck = function() {
+                
+                alert();
+            }
+            
             
         }
     
